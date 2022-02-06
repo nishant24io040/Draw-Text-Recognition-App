@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/floating_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="2dp"
+        app:fab_expandDirection="up"
+        app:fab_addButtonColorPressed="#B68A03"
+        app:fab_labelStyle="@style/LabelStyle"
+        app:fab_labelsPosition="right"
+        app:fab_addButtonColorNormal="#FFC107"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/drawableView"
+        app:layout_constraintVertical_bias="1.0">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/undo"
+            app:fab_icon="@drawable/icon_undo"
+            app:fab_colorPressed="#B1B1B1"
+            app:fab_colorNormal="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_size="mini" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/colorpicker"
+            app:fab_icon="@drawable/iconsdroper"
+            app:fab_colorNormal="@color/white"
+            app:fab_colorPressed="#B1B1B1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_size="mini" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/clear"
+            app:fab_colorNormal="@color/white"
+            app:fab_icon="@drawable/ico_broom"
+            app:fab_colorPressed="#B1B1B1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_size="mini" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/redo"
+            app:fab_icon="@drawable/ico_redo"
+            app:fab_colorNormal="@color/white"
+            app:fab_colorPressed="#B1B1B1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_size="mini" />
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+    <com.tolunaykan.drawinglibrary.PaintView
+        android:id="@+id/drawableView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
